@@ -4,9 +4,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Profile() {
+  
+
   let usuario = localStorage.getItem("user");
 
   let navigate = useNavigate();
+
+  if(!localStorage.getItem("jwt")){
+    navigate("/"); 
+  }
 
   const [contenido, setContenido] = useState("");
   const [myJokes, setMyJokes] = useState([]);

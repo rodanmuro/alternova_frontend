@@ -10,10 +10,7 @@ function Profile() {
 
   let navigate = useNavigate();
 
-  if(!localStorage.getItem("jwt")){
-    navigate("/"); 
-  }
-
+  
   const [contenido, setContenido] = useState("");
   const [myJokes, setMyJokes] = useState([]);
 
